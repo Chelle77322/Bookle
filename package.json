@@ -1,33 +1,35 @@
 {
-  "name": "budgetary",
+  "name": "bookle",
   "version": "1.0.0",
-  "description": " A budget app that allows the user to track transactions both online and offline",
+  "description": "A REACT app that uses the Google Books API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "lite-server": "lite-server"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'goobooks/*'\" \"npm run goobooks\"",
+    "client": "cd goobooks && npm run start",
+    "seed": " node scripts/seedDB.js",
+    "install": "cd goobooks && npm install",
+    "build": "cd goobooks/ && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chelle77322/Budgetary.git"
+    "url": "git+https://github.com/Chelle77322/Bookle.git"
   },
-  "author": "",
-  "license": "GNU",
+  "author": "Michelle Hall",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Chelle77322/Budgetary.git/issues"
-  },
-  "homepage": "https://github.com/Chelle77322/Budgetary.git/README",
-  "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "lite-server": "^2.6.1",
-    "mongoose": "^5.12.4",
-    "morgan": "^1.10.0"
-    
+    "url": "https://github.com/Chelle77322/Bookle/issues"
   },
   "devDependencies": {
-    "webpack": "^5.35.0",
-    "webpack-cli": "^4.6.0"
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.12.12"
   }
 }

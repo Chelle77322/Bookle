@@ -1,9 +1,9 @@
 
-<h1 align="center">Budgetary</h1>
+<h1 align="center">Bookle</h1>
   
 ![badge](https://img.shields.io/badge/license-GNU-brightgreen)<br />
 ## Description
-ℹ️ A Budgeting App for People on the go
+ℹ️ A Reading List REACT APP
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -13,9 +13,9 @@
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-💻 Install the following npm packages: mongodb, mongoose, express, compression
+💻 Install the following npm packages: if-env, axios, mongoose, express
 ## Usage
-📖Budgetary can be used freely with appropriate acknowledgements under Creative Commons
+📖Bookle can be used freely with appropriate acknowledgements under Creative Commons Licensing
 ## License
 ![badge](https://img.shields.io/badge/license-GNU-brightgreen)
 <br />
@@ -23,7 +23,7 @@ This application is covered by the GNU license.
 ## Contributing
 🙋‍♀️Michelle Hall
 ## Tests
- No
+ npm run tests
 ## Questions
 🤔 If you have an questions or suggestions please contact me<br />
 <br />
