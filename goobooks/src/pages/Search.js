@@ -5,7 +5,7 @@ import SearchForm from "../components/SearchForm";
 import Jumbotron from "../components/Jumbo";
 import api from "../utils/api";
 
-class Search extends Component {
+class Searched extends Component {
 
     state = {
         search: "",
@@ -23,7 +23,7 @@ searchNovels = query => {
 //When save button is clicked
 handlesaveclick = event => {
     const novelInfo = event;
-    console.log(novelInfo);
+    
 //You then want to save the book to the data base
 api.saveNovel(novelInfo).then(result => console.log(result)).catch(error => console.log(error));
 }
@@ -65,4 +65,4 @@ render() {
     )
 }
 }
-export default Search;
+export default Searched;
