@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import NovelCard from '../components/NovelCard';
-import Row from '../components/Row';
-import SearchForm from '../components/SearchForm';
-import Jumbotron from '../components/Jumbo';
-import api from '../utils/api';
+import React, {Component} from "react";
+import NovelCard from "../components/NovelCard";
+import Row from "../components/Row";
+import SearchForm from "../components/SearchForm";
+import Jumbotron from "../components/Jumbo";
+import api from "../utils/api";
 
 class Search extends Component {
 
@@ -14,10 +14,11 @@ class Search extends Component {
 //When the page loads initially
 componentDidMount() {
     console.log("Components successfully mounted");
-    this.SearchNovels("James Joyce");
+    this.searchNovels("James Joyce");
 }
-SearchNovels = query => {
-    api.Search(query).this(result => this.setState({results:result.data.items})).then(console.log(this.state.results)).catch(error => console.log(error));
+
+searchNovels = query => {
+    api.search(query).then(result => this.setState({results:result.data.items})).then(console.log(this.state.results)).catch(error => console.log(error));
 }
 //When save button is clicked
 handlesaveclick = event => {
@@ -33,11 +34,11 @@ handleinputchange = event => {
 }
 handleformsubmit = event => {
     event.preventDefault();
-    this.SearchNovels(this.state.search);
+    this.searchNovels(this.state.search);
 }
 render() {
     return (
-        <div className = "container-fluid">
+        <div className = "container-fluid five">
             <Jumbotron />
             <Row>
                 <SearchForm

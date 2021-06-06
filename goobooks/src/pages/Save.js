@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import Jumbotron from "../components/Jumbo";
 
-class Save extends Component{
+class Saved extends Component{
     render () {
         return (
             <div className = "container-fluid">
@@ -11,4 +11,4 @@ class Save extends Component{
         )
     }
 }
-export default Save;
+export default Saved;

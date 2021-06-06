@@ -3,8 +3,8 @@ import React from 'react';
 const styles = {
     image: {
         margin: 15,
-        height: "250px",
-        width: "250px"
+        height: "50%",
+        width: "55%"
     }
 }
 function NovelCard(props) {
@@ -19,7 +19,7 @@ function NovelCard(props) {
                 style = {styles.image} />
 
             <p> <a href = {props.link}>Link</a></p>    
-            <p onClick = {() => props.handlesaveclick(props)}>Save Book</p>
+            <p  className = "lead" onClick = {() => props.handlesaveclick(props)}>Save Book</p>
             <p>{props.description}</p>
             </div>
         </div>

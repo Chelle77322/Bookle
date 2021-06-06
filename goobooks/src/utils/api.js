@@ -1,10 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
-export default function SearchNovels (query){
+export default {
+    search: function(query) {
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query);
+},
+SaveNovel: function(novelInfo){
+return axios.post(`/${novelInfo.id}`);
+}
     
-return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query);
-};
-export  function SaveNovel(novelInfo){
-
-    return axios.post(`/${novelInfo.id}`);
 };

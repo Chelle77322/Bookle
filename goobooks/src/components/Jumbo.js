@@ -2,12 +2,12 @@ import React from 'react';
 
 function Jumbotron(props){
     return (
-        <div className = "jumbotron jumbotron-fluid">
-            <div className = "container">
-                <h1 className = "display-4">
+        <div className = "blend hr">
+            <div className = "hr">
+                <h1 className = "tdbc-h1">
                     GooBooks React Search App
                 </h1>
-                <p className = "lead"> Look for and save the books that interest you</p>
+                <p className = "tdbc-lead"> Look for and save the books that interest you</p>
             </div>
         </div>
     );
