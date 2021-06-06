@@ -19,7 +19,7 @@ $list3: $tdbc-color-background  0%,$tdbc-color-background  10%,$tdbc-color-prima
 /*Blending image and background*/
 $cool-grad: linear-gradient(aqua, royalblue);
 $meh-grad: linear-gradient(turquoise, transparent);
-$snarky-grad: linear-gradient(navy 75% aqua, transparent);
+$snarky-grad: linear-gradient(navy 75% aqua);
 
 @mixin blendy($img-path, $color: null, $grad: null,
 $blend: multiply)

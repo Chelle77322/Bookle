@@ -13,15 +13,8 @@
     "build": "cd goobooks/ && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Chelle77322/Bookle.git"
-  },
   "author": "Michelle Hall",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Chelle77322/Bookle/issues"
-  },
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
