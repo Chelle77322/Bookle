@@ -94,9 +94,9 @@ ul.tdbc-column-container {
 
 // stylelint-disable-next-line selector-max-type
 hr {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  border: 1px solid tdbc-color("primary");
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  //border: 1px solid tdbc-color("primary");
 }
 .five {
   @include gradient( to bottom, $list3);

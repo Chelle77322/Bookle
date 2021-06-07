@@ -16,6 +16,7 @@ h1,
 .tdbc-h1 {
   font-size: $tdbc-h1-font-size;
   font-size: unquote("min(max(3rem, 5vw), #{$tdbc-h1-font-size})");
+  text-align: center;
 }
 
 h2,
@@ -42,6 +43,7 @@ li {
 
 p {
   margin: 0 0 1rem;
+  text-align: center;
 }
 
 article {
@@ -73,7 +75,7 @@ a:not(.tdbc-button) {
 
 pre,
 code {
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: Consolas, Monaco, "Ballet", "Ballet", monospace;
   font-weight: bold;
 }
 

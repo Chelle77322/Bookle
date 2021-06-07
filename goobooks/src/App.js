@@ -7,12 +7,14 @@ import Search from './pages/Search';
 function App() {
     return (
         <Router>
+           
             <div>
-                <NavTabs />
-                <Route exact path = "/" component = {Search}/>
+            <NavTabs />
+            <Route exact path = "/" component = {Search}/>
                 <Route exact path = "/search" component = {Search}/>
                 <Route exact path = "/save" component = {Saved} />
             </div>
+            
         </Router>
     );
 }
