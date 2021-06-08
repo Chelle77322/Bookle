@@ -18,7 +18,7 @@ function NovelCard(props) {
                 src = {props.image}
                 style = {styles.image} />
 
-            <p> <a href = {props.link}>Link</a></p>    
+            <p> <a href = {props.link}>Book Detail</a></p>    
             <p  className = "lead" onClick = {() => props.handlesaveclick(props)}>Save Book</p>
             <p>{props.description}</p>
             </div>
