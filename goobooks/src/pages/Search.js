@@ -14,18 +14,18 @@ class Searched extends Component {
 //When the page loads initially
 componentDidMount() {
     console.log("Components successfully mounted");
-    this.searchNovels("James Joyce");
+    
 }
 
-searchNovels = query => {
-    api.search(query).then(result => this.setState({results:result.data.items})).then(console.log(this.state.results)).catch(error => console.log(error));
+googleNovels = query => {
+    api.googleNovels(query).then(result => this.setState({results:result.data.items})).then(console.log(this.state.results)).catch(error => console.log(error));
 }
 //When save button is clicked
 handlesaveclick = event => {
     const novelInfo = event;
     
 //You then want to save the book to the data base
-api.saveNovel(novelInfo).then(result => console.log(result)).catch(error => console.log(error));
+api.SaveNovel(novelInfo).then(result => console.log(result)).catch(error => console.log(error));
 }
 handleinputchange = event => {
     const name = event.target.name;
@@ -34,7 +34,7 @@ handleinputchange = event => {
 }
 handleformsubmit = event => {
     event.preventDefault();
-    this.searchNovels(this.state.search);
+    this.googleNovels(this.state.search);
 }
 render() {
     return (

@@ -1,4 +1,4 @@
-import React,  { Component} from 'react';
+import React,{ Component} from 'react';
 import NovelCard from './NovelCard';
 import Row from './Row';
 import SearchForm from './SearchForm';
@@ -15,7 +15,7 @@ class SearchContainer extends Component {
 //When the page loads
 componentDidMount() {
     console.log("Components have mounted");
-    this.SearchNovels("James Joyce");
+    this.SearchNovels("");
 }
 SearchNovels = query => {
     api.search(query).then(result => this.setState({results:result.data.items})).then(console.log(this.state.results)).catch(error => console.log(error));
@@ -40,7 +40,7 @@ render () {
             <Jumbotron />
             <Row>
                 <SearchForm
-                search = {this.state.search}
+                googleNovels = {this.state.search}
                 handleformsubmit = {this.handleformsubmit}
                 handleinputchange = {this.handleinputchange}/>
             </Row>
@@ -48,12 +48,12 @@ render () {
                 {this.state.results.map(novel =>(
                     <NovelCard
                     id={novel.volumeInfo.id} 
-                            key={novel.volumeInfo.id} 
-                            title={novel.volumeInfo.title} 
-                            description={novel.volumeInfo.description} 
-                            image={novel.volumeInfo.imageLinks.thumbnail} 
-                            link={novel.volumeInfo.infoLink} 
-                            handleClick={this.handlenovelclick}
+                    key={novel.volumeInfo.id} 
+                    title={novel.volumeInfo.title} 
+                    description={novel.volumeInfo.description} 
+                    imageLink={novel.volumeInfo.imageLinks.thumbnail} 
+                    link={novel.volumeInfo.infoLink} 
+                    handleClick={this.handlenovelclick}
                         />
                     
                 ))}

@@ -2,20 +2,24 @@ import React from 'react';
 
 function SearchForm(props){
     return (
+        <div>
         <form>
             <div className = "form-group">
                 <label htmlFor = "search">Search for Book:</label>
-                <input onChange = {props.handleinputchange}
-                value = {props.search}
+                <input className = "form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0 "
+                id= "search"
+               value = {props.search}
                 name = "search"
                 type = "text"
-                className = "form-control"
                 placeholder = "Search for a book"
-                id = "search"/>
+                onChange = {props.handleinputchange}
+                />
 
                 <button onClick = {props.handleformsubmit} className = "btn btn-primary">Search</button>
+               
             </div>
-        </form>
-    );
+            </form>
+        </div>
+    )
 }
 export default SearchForm;
