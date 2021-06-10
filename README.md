@@ -11,6 +11,7 @@
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [Issues](#issues)
 - [Questions](#questions)
 ## Installation
 💻 Install the following npm packages: if-env, axios, mongoose, express
@@ -24,6 +25,8 @@ This application is covered by the GNU license.
 🙋‍♀️Michelle Hall
 ## Tests
  npm run tests
+## Issues
+Unfortunately api posting after search seems intermitten with errors even if the api call returns a status 200. Fingers crossed it works when you view it
 ## Questions
 
 🤔 If you have an questions or suggestions please contact me<br />
